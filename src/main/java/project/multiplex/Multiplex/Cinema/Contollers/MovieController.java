@@ -7,9 +7,7 @@ import project.multiplex.Multiplex.Cinema.Models.Movie;
 import project.multiplex.Multiplex.Cinema.Models.ScreeningMovie;
 
 import java.time.LocalDateTime;
-import java.time.ZoneId;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 
