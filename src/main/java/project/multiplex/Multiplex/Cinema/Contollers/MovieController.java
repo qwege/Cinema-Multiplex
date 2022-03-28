@@ -14,17 +14,7 @@ import java.util.List;
 @RestController
 public class MovieController {
 
-    @RequestMapping("/CreateMovie/{title}")
-    public boolean createUser(@PathVariable String title ) {
-            DBConnect.movieDAO.saveData(new Movie(title));
-            return true;
-
-    }
-    @RequestMapping("/CreateMovie/{title}/{desc}")
-    public boolean createUser(@PathVariable String title ,@PathVariable String desc ) {
-        DBConnect.movieDAO.saveData(new Movie(title,desc));
-        return true;
-    }
+  
     // example data param 2022-01-03T10:15:30
     @RequestMapping(value = "/ChooseMovie/{dataStart}/{dataEnd}",method = RequestMethod.GET)
     public List<ScreeningMovie> ChooseMovie(@PathVariable("dataStart")  @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")  LocalDateTime dataStart,
